@@ -6,6 +6,5 @@ In order to run this app, you need to follow the steps below:
 
 Users will be able to see the 17 artists I'm following on Spotify and learn about the popularity of each artists on Spotify and Twitter with bar graphs. Users can also learn the top tracks by each artist and see its popularity on the two platforms by bar graphs. Selecting a track will lead to another page that shows a table of the most popular tweets and the info about retweet and favorite count of each with a scatterplot that visualizes the info further.
 
-Data Structure:
-I implemented Graph and Vertex class to represent the data. There are three types of vertices in this graph: Artist, Track, and Tweet, which are the child class of Vertex. The graph would contains all vertices in this graph.
+Data Structure:The data structure is tree. Since tree is also a type of graph, I implemented Graph and Vertex class to represent the data. There are three types of vertices in this graph: Artist, Track, and Tweet, which are the child class of Vertex. The graph would contains all vertices in this graph.
 Each Vertex object would have a list of children Vertex. The children of Artist type vertex would be a list of Track type vertices. The children of Track type vertex would be a list of Tweet type vertices.
