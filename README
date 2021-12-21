@@ -1,6 +1,6 @@
 Project Code:
 In order to run this app, you need to follow the steps below: 
-1) install the required packages, including matplotlib, flask, json and requests. 
+1) install the required packages, including matplotlib, flask, and requests. 
 2) boot up the flask app by running the command line: python app.py
 3) copy the link to the web browser and interact with the web app
 
