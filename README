@@ -1,0 +1,7 @@
+In order to run this app, you need to follow the steps below: 
+1) install the required packages, including matplotlib, flask, json and requests. 
+2) boot up the flask app
+3) 
+
+Data Structure:
+I implemented Graph and Vertex class to represent the data. There are three types of vertices in this graph: Artist, Track, and Tweet, which are the child class of Vertex. The graph would contains all vertices in this graph.

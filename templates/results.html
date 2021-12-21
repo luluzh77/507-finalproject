@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Spotify-Twitter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/grayscale.css" rel="stylesheet">
+
+    <link href="/static/css/image-picker.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+
+<style>
+    a {
+        font-weight: 900;
+    }
+
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      max-width:300px;
+      max-height:180px;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+</style>
+
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/" onclick="startOver()">
+            <img class="img-fluid" src="../static/img/twitter-spotify.png" style="width:200px;height:100px;">
+            Spotify-Twitter
+        </a>
+    </div>
+</nav>
+<!-- Header -->
+<header id="header" class="masthead" style="display: block;">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+            <h3>Click the following artist for more information about his/her top hits</h3>
+            {% for entry in entries %}
+                <div class="gallery">
+                  <a target="_blank" href="{{ url_for(next) + '?name=' + entry.name }}">
+                      <img src="{{ entry.image_url }}" alt="{{ entry.name }}" title="{{ entry.name }}">
+                  </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</header>
+
+<section class="info-section text-center style2">
+    <div class="text-center text-lg-left">
+        <h2><strong>Artist Popularity Data Presentation</strong></h2>
+    </div>
+    <h4>Artists Popularity Based On Recent Twitter Data</h4>
+    <div class="container">
+        <img src="../static/img/artist_twitter_popularity.png" alt="">
+    </div>
+    </br>
+    </br>
+    </br>
+    <h4>Artists Popularity Based On Spotify Data</h4>
+    <div class="container">
+        <img src="../static/img/artist_spotify_popularity.png" alt="">
+    </div>
+</section>
+
+<!-- Bootstrap core JavaScript -->
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Scripts for the Image Picker -->
+<script src="/static/js/image-picker.js"></script>
+</body>
+
+</html>
